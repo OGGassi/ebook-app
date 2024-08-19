@@ -1,0 +1,125 @@
+/* src/components/EBook.css */
+.page-turn-next-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .page-turn-next-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 300ms ease-in;
+  }
+  
+  .page-turn-next-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .page-turn-next-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 300ms ease-in;
+  }
+  
+  .page-turn-prev-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  .page-turn-prev-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 300ms ease-in;
+  }
+  
+  .page-turn-prev-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .page-turn-prev-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 300ms ease-in;
+  }
+
+  .book-container {
+    position: relative;
+    perspective: 1500px;
+    transform-style: preserve-3d;
+  }
+  
+  .book-spine {
+    position: absolute;
+    right: 0;  /* Changed from left to right */
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to left, #d4a373, #e3b587);  /* Changed gradient direction */
+    transform: rotateY(30deg) translateZ(-5px);  /* Changed rotation */
+    box-shadow: inset 2px 0 5px rgba(0,0,0,0.1);  /* Changed shadow direction */
+  }
+  
+  .book-content {
+    background: white;
+    transform: rotateY(3deg);  /* Changed rotation */
+    box-shadow: 
+      0 2px 5px 0 rgba(0,0,0,0.16), 
+      0 2px 10px 0 rgba(0,0,0,0.12),
+      -5px 5px 15px 5px rgba(0,0,0,0.1);  /* Changed shadow direction */
+  }
+  
+  .book-pages {
+    background: white;
+    border-right: 1px solid #e0e0e0;  /* Changed from left to right */
+  }
+  
+  .page-content {
+    padding: 20px;
+    background: linear-gradient(to left, #f9f9f9 0%, white 8%, white 100%);  /* Changed gradient direction */
+  }
+  
+  /* RTL specific transitions */
+  .page-turn-next-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  .page-turn-next-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 300ms ease-in;
+  }
+  
+  .page-turn-next-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .page-turn-next-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 300ms ease-in;
+  }
+  
+  .page-turn-prev-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .page-turn-prev-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 300ms ease-in;
+  }
+  
+  .page-turn-prev-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .page-turn-prev-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 300ms ease-in;
+  }
